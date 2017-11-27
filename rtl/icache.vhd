@@ -21,7 +21,7 @@ entity icache is
     clk     : in std_logic;
     reset   : in std_logic;
 
-    orca_AWID    : in std_logic_vector(3 downto 0);
+    -- orca_AWID    : in std_logic_vector(3 downto 0);
     orca_AWADDR  : in std_logic_vector(ADDR_WIDTH-1 downto 0);
     orca_AWLEN   : in std_logic_vector(3 downto 0);
     orca_AWSIZE  : in std_logic_vector(2 downto 0);
@@ -33,19 +33,19 @@ entity icache is
     orca_AWVALID : in std_logic;
     orca_AWREADY : out std_logic;
 
-    orca_WID     : in std_logic_vector(3 downto 0);
+    -- orca_WID     : in std_logic_vector(3 downto 0);
     orca_WDATA   : in std_logic_vector(ORCA_WIDTH -1 downto 0);
     orca_WSTRB   : in std_logic_vector(ORCA_WIDTH/BYTE_SIZE -1 downto 0);
     orca_WLAST   : in std_logic;
     orca_WVALID  : in std_logic;
     orca_WREADY  : out std_logic;
 
-    orca_BID     : out std_logic_vector(3 downto 0);
+    -- orca_BID     : out std_logic_vector(3 downto 0);
     orca_BRESP   : out std_logic_vector(1 downto 0);
     orca_BVALID  : out std_logic;
     orca_BREADY  : in std_logic;
 
-    orca_ARID    : in std_logic_vector(3 downto 0);
+    -- orca_ARID    : in std_logic_vector(3 downto 0);
     orca_ARADDR  : in std_logic_vector(ADDR_WIDTH -1 downto 0);
     orca_ARLEN   : in std_logic_vector(3 downto 0);
     orca_ARSIZE  : in std_logic_vector(2 downto 0);
@@ -56,14 +56,14 @@ entity icache is
     orca_ARVALID : in std_logic;
     orca_ARREADY : out std_logic;
 
-    orca_RID     : out std_logic_vector(3 downto 0);
+    -- orca_RID     : out std_logic_vector(3 downto 0);
     orca_RDATA   : out std_logic_vector(ORCA_WIDTH -1 downto 0);
     orca_RRESP   : out std_logic_vector(1 downto 0);
     orca_RLAST   : out std_logic;
     orca_RVALID  : out std_logic;
     orca_RREADY  : in std_logic;
 
-    dram_AWID     : out std_logic_vector(3 downto 0);
+    -- dram_AWID     : out std_logic_vector(3 downto 0);
     dram_AWADDR   : out std_logic_vector(ADDR_WIDTH-1 downto 0);
     dram_AWLEN    : out std_logic_vector(3 downto 0);
     dram_AWSIZE   : out std_logic_vector(2 downto 0);
@@ -75,19 +75,19 @@ entity icache is
     dram_AWVALID  : out std_logic;
     dram_AWREADY  : in std_logic;
 
-    dram_WID      : out std_logic_vector(3 downto 0);
+    -- dram_WID      : out std_logic_vector(3 downto 0);
     dram_WDATA    : out std_logic_vector(DRAM_WIDTH -1 downto 0);
     dram_WSTRB    : out std_logic_vector(DRAM_WIDTH/BYTE_SIZE -1 downto 0);
     dram_WLAST    : out std_logic;
     dram_WVALID   : out std_logic;
     dram_WREADY   : in std_logic;
 
-    dram_BID      : in std_logic_vector(3 downto 0);
+    -- dram_BID      : in std_logic_vector(3 downto 0);
     dram_BRESP    : in std_logic_vector(1 downto 0);
     dram_BVALID   : in std_logic;
     dram_BREADY   : out std_logic;
 
-    dram_ARID     : out std_logic_vector(3 downto 0);
+    -- dram_ARID     : out std_logic_vector(3 downto 0);
     dram_ARADDR   : out std_logic_vector(ADDR_WIDTH -1 downto 0);
     dram_ARLEN    : out std_logic_vector(3 downto 0);
     dram_ARSIZE   : out std_logic_vector(2 downto 0);
@@ -98,7 +98,7 @@ entity icache is
     dram_ARVALID  : out std_logic;
     dram_ARREADY  : in std_logic;
 
-    dram_RID      : in std_logic_vector(3 downto 0);
+    -- dram_RID      : in std_logic_vector(3 downto 0);
     dram_RDATA    : in std_logic_vector(DRAM_WIDTH -1 downto 0);
     dram_RRESP    : in std_logic_vector(1 downto 0);
     dram_RLAST    : in std_logic;

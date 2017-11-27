@@ -22,7 +22,7 @@ entity axi_instruction_master is
     core_instruction_writedata : in std_logic_vector(REGISTER_SIZE-1 downto 0);
     core_instruction_waitrequest : out std_logic;
 
-    AWID : out std_logic_vector(3 downto 0);
+    -- AWID : out std_logic_vector(3 downto 0);
     AWADDR : out std_logic_vector(REGISTER_SIZE-1 downto 0);
     AWLEN : out std_logic_vector(3 downto 0);
     AWSIZE : out std_logic_vector(2 downto 0);
@@ -33,19 +33,19 @@ entity axi_instruction_master is
     AWVALID : out std_logic;
     AWREADY : in std_logic;
 
-    WID : out std_logic_vector(3 downto 0);
+    -- WID : out std_logic_vector(3 downto 0);
     WSTRB : out std_logic_vector(REGISTER_SIZE/BYTE_SIZE -1 downto 0);
     WLAST : out std_logic;
     WVALID : out std_logic;
     WDATA : out std_logic_vector(REGISTER_SIZE-1 downto 0);
     WREADY : in std_logic;
     
-    BID : in std_logic_vector(3 downto 0);
+    -- BID : in std_logic_vector(3 downto 0);
     BRESP : in std_logic_vector(1 downto 0);
     BVALID : in std_logic;
     BREADY : out std_logic;
 
-    ARID : out std_logic_vector(3 downto 0);
+    -- ARID : out std_logic_vector(3 downto 0);
     ARADDR : out std_logic_vector(REGISTER_SIZE-1 downto 0);
     ARLEN : out std_logic_vector(3 downto 0);
     ARSIZE : out std_logic_vector(2 downto 0);
@@ -56,7 +56,7 @@ entity axi_instruction_master is
     ARVALID : out std_logic;
     ARREADY : in std_logic;
 
-    RID : in std_logic_vector(3 downto 0);
+    -- RID : in std_logic_vector(3 downto 0);
     RDATA : in std_logic_vector(REGISTER_SIZE-1 downto 0);
     RRESP : in std_logic_vector(1 downto 0);
     RLAST : in std_logic;
@@ -76,7 +76,7 @@ architecture rtl of axi_instruction_master is
 
 begin 
 
-  AWID <= (others => '0');
+  -- AWID <= (others => '0');
   AWLEN <= BURST_LEN;
   AWSIZE <= BURST_SIZE;
   AWBURST <= BURST_INCR;
@@ -87,7 +87,7 @@ begin
   AWVALID <= '0';
   AWADDR <= (others => '0');
 
-  WID <= (others => '0');
+  -- WID <= (others => '0');
   WLAST <= '0';
   WVALID <= '0';
   WDATA <= (others => '0');
@@ -95,7 +95,7 @@ begin
 
   BREADY <= '0';
 
-  ARID <= (others => '0');
+  -- ARID <= (others => '0');
   ARLEN <= BURST_LEN;
   ARSIZE <= BURST_SIZE;
   ARLOCK <= LOCK_VAL;

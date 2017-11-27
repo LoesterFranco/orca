@@ -77,7 +77,7 @@ entity orca is
     instr_STALL_I                 : in  std_logic := '0';
 
     --AXI
-    data_AWID    : out std_logic_vector(3 downto 0);
+    --data_AWID    : out std_logic_vector(3 downto 0);
     data_AWADDR  : out std_logic_vector(REGISTER_SIZE -1 downto 0);
     data_AWLEN   : out std_logic_vector(3 downto 0);
     data_AWSIZE  : out std_logic_vector(2 downto 0);
@@ -88,19 +88,19 @@ entity orca is
     data_AWVALID : out std_logic;
     data_AWREADY : in  std_logic := '0';
 
-    data_WID    : out std_logic_vector(3 downto 0);
+    --data_WID    : out std_logic_vector(3 downto 0);
     data_WDATA  : out std_logic_vector(REGISTER_SIZE -1 downto 0);
     data_WSTRB  : out std_logic_vector(REGISTER_SIZE/8 -1 downto 0);
     data_WLAST  : out std_logic;
     data_WVALID : out std_logic;
     data_WREADY : in  std_logic := '0';
 
-    data_BID    : in  std_logic_vector(3 downto 0) := (others => '0');
+    --data_BID    : in  std_logic_vector(3 downto 0) := (others => '0');
     data_BRESP  : in  std_logic_vector(1 downto 0) := (others => '0');
     data_BVALID : in  std_logic := '0';
     data_BREADY : out std_logic;
 
-    data_ARID    : out std_logic_vector(3 downto 0);
+    --data_ARID    : out std_logic_vector(3 downto 0);
     data_ARADDR  : out std_logic_vector(REGISTER_SIZE -1 downto 0);
     data_ARLEN   : out std_logic_vector(3 downto 0);
     data_ARSIZE  : out std_logic_vector(2 downto 0);
@@ -111,14 +111,14 @@ entity orca is
     data_ARVALID : out std_logic;
     data_ARREADY : in  std_logic := '0';
 
-    data_RID    : in  std_logic_vector(3 downto 0) := (others => '0');
+    --data_RID    : in  std_logic_vector(3 downto 0) := (others => '0');
     data_RDATA  : in  std_logic_vector(REGISTER_SIZE -1 downto 0) := (others => '0');
     data_RRESP  : in  std_logic_vector(1 downto 0) := (others => '0');
     data_RLAST  : in  std_logic := '0';
     data_RVALID : in  std_logic := '0';
     data_RREADY : out std_logic;
 
-    itcram_ARID    : out std_logic_vector(3 downto 0);
+    --itcram_ARID    : out std_logic_vector(3 downto 0);
     itcram_ARADDR  : out std_logic_vector(REGISTER_SIZE -1 downto 0);
     itcram_ARLEN   : out std_logic_vector(3 downto 0);
     itcram_ARSIZE  : out std_logic_vector(2 downto 0);
@@ -129,14 +129,14 @@ entity orca is
     itcram_ARVALID : out std_logic;
     itcram_ARREADY : in  std_logic := '0';
 
-    itcram_RID    : in  std_logic_vector(3 downto 0) := (others => '0');
+    --itcram_RID    : in  std_logic_vector(3 downto 0) := (others => '0');
     itcram_RDATA  : in  std_logic_vector(REGISTER_SIZE -1 downto 0) := (others => '0');
     itcram_RRESP  : in  std_logic_vector(1 downto 0) := (others => '0');
     itcram_RLAST  : in  std_logic := '0';
     itcram_RVALID : in  std_logic := '0';
     itcram_RREADY : out std_logic;
 
-    itcram_AWID    : out std_logic_vector(3 downto 0);
+    --itcram_AWID    : out std_logic_vector(3 downto 0);
     itcram_AWADDR  : out std_logic_vector(REGISTER_SIZE -1 downto 0);
     itcram_AWLEN   : out std_logic_vector(3 downto 0);
     itcram_AWSIZE  : out std_logic_vector(2 downto 0);
@@ -147,19 +147,19 @@ entity orca is
     itcram_AWVALID : out std_logic;
     itcram_AWREADY : in  std_logic := '0';
 
-    itcram_WID     : out std_logic_vector(3 downto 0);
+    --itcram_WID     : out std_logic_vector(3 downto 0);
     itcram_WDATA   : out std_logic_vector(REGISTER_SIZE -1 downto 0);
     itcram_WSTRB   : out std_logic_vector(REGISTER_SIZE/8 -1 downto 0);
     itcram_WLAST   : out std_logic;
     itcram_WVALID  : out std_logic;
     itcram_WREADY  : in  std_logic := '0';
 
-    itcram_BID     : in  std_logic_vector(3 downto 0) := (others => '0');
+    --itcram_BID     : in  std_logic_vector(3 downto 0) := (others => '0');
     itcram_BRESP   : in  std_logic_vector(1 downto 0) := (others => '0');
     itcram_BVALID  : in  std_logic := '0';
     itcram_BREADY  : out std_logic;
 
-    iram_ARID    : out std_logic_vector(3 downto 0);
+    --iram_ARID    : out std_logic_vector(3 downto 0);
     iram_ARADDR  : out std_logic_vector(REGISTER_SIZE -1 downto 0);
     iram_ARLEN   : out std_logic_vector(3 downto 0);
     iram_ARSIZE  : out std_logic_vector(2 downto 0);
@@ -170,14 +170,14 @@ entity orca is
     iram_ARVALID : out std_logic;
     iram_ARREADY : in  std_logic := '0';
 
-    iram_RID    : in  std_logic_vector(3 downto 0) := (others => '0');
+    --iram_RID    : in  std_logic_vector(3 downto 0) := (others => '0');
     iram_RDATA  : in  std_logic_vector(DRAM_WIDTH-1 downto 0) := (others => '0');
     iram_RRESP  : in  std_logic_vector(1 downto 0) := (others => '0');
     iram_RLAST  : in  std_logic := '0';
     iram_RVALID : in  std_logic := '0';
     iram_RREADY : out std_logic;
 
-    iram_AWID    : out std_logic_vector(3 downto 0);
+    --iram_AWID    : out std_logic_vector(3 downto 0);
     iram_AWADDR  : out std_logic_vector(REGISTER_SIZE -1 downto 0);
     iram_AWLEN   : out std_logic_vector(3 downto 0);
     iram_AWSIZE  : out std_logic_vector(2 downto 0);
@@ -188,7 +188,7 @@ entity orca is
     iram_AWVALID : out std_logic;
     iram_AWREADY : in  std_logic := '0';
 		
-    iram_WID     : out std_logic_vector(3 downto 0);
+    --iram_WID     : out std_logic_vector(3 downto 0);
     iram_WDATA   : out std_logic_vector(DRAM_WIDTH-1 downto 0);
     iram_WSTRB   : out std_logic_vector(DRAM_WIDTH/8 -1 downto 0);
     iram_WLAST   : out std_logic;
@@ -376,7 +376,7 @@ begin  -- architecture rtl
 
     signal axi_reset : std_logic;
 
-    signal instr_AWID    : std_logic_vector(3 downto 0);
+    --signal instr_AWID    : std_logic_vector(3 downto 0);
     signal instr_AWADDR  : std_logic_vector(REGISTER_SIZE-1 downto 0);
     signal instr_AWLEN   : std_logic_vector(3 downto 0);
     signal instr_AWSIZE  : std_logic_vector(2 downto 0);
@@ -388,19 +388,19 @@ begin  -- architecture rtl
     signal instr_AWVALID : std_logic;
     signal instr_AWREADY : std_logic;
 
-    signal instr_WID     : std_logic_vector(3 downto 0);
+    --signal instr_WID     : std_logic_vector(3 downto 0);
     signal instr_WDATA   : std_logic_vector(REGISTER_SIZE-1 downto 0);
     signal instr_WSTRB   : std_logic_vector(REGISTER_SIZE/BYTE_SIZE-1 downto 0);
     signal instr_WLAST   : std_logic;
     signal instr_WVALID  : std_logic;
     signal instr_WREADY  : std_logic;
 
-    signal instr_BID     : std_logic_vector(3 downto 0);
+    --signal instr_BID     : std_logic_vector(3 downto 0);
     signal instr_BRESP   : std_logic_vector(1 downto 0);
     signal instr_BVALID  : std_logic;
     signal instr_BREADY  : std_logic;
 
-    signal instr_ARID    : std_logic_vector(3 downto 0);
+    --signal instr_ARID    : std_logic_vector(3 downto 0);
     signal instr_ARADDR  : std_logic_vector(REGISTER_SIZE-1 downto 0);
     signal instr_ARLEN   : std_logic_vector(3 downto 0);
     signal instr_ARSIZE  : std_logic_vector(2 downto 0);
@@ -411,7 +411,7 @@ begin  -- architecture rtl
     signal instr_ARVALID : std_logic;
     signal instr_ARREADY : std_logic;
     
-    signal instr_RID     : std_logic_vector(3 downto 0);
+    --signal instr_RID     : std_logic_vector(3 downto 0);
     signal instr_RDATA   : std_logic_vector(REGISTER_SIZE -1 downto 0);
     signal instr_RRESP   : std_logic_vector(1 downto 0);
     signal instr_RLAST   : std_logic;
@@ -448,7 +448,7 @@ begin  -- architecture rtl
         core_data_writedata     => core_data_writedata,    
         core_data_ack           => core_data_ack,
 
-        AWID                    => data_AWID, 
+        --AWID                    => data_AWID, 
         AWADDR                  => data_AWADDR, 
         AWLEN                   => data_AWLEN,
         AWSIZE                  => data_AWSIZE,
@@ -459,19 +459,19 @@ begin  -- architecture rtl
         AWVALID                 => data_AWVALID,
         AWREADY                 => data_AWREADY,
 
-        WID                     => data_WID,
+        --WID                     => data_WID,
         WSTRB                   => data_WSTRB,
         WLAST                   => data_WLAST,
         WVALID                  => data_WVALID,
         WDATA                   => data_WDATA,
         WREADY                  => data_WREADY,
         
-        BID                     => data_BID,
+        --BID                     => data_BID,
         BRESP                   => data_BRESP,
         BVALID                  => data_BVALID,
         BREADY                  => data_BREADY,
 
-        ARID                    => data_ARID, 
+        --ARID                    => data_ARID, 
         ARADDR                  => data_ARADDR,
         ARLEN                   => data_ARLEN, 
         ARSIZE                  => data_ARSIZE,
@@ -482,7 +482,7 @@ begin  -- architecture rtl
         ARVALID                 => data_ARVALID,
         ARREADY                 => data_ARREADY,
 
-        RID                     => data_RID, 
+        --RID                     => data_RID, 
         RDATA                   => data_RDATA, 
         RRESP                   => data_RRESP,
         RLAST                   => data_RLAST, 
@@ -507,7 +507,7 @@ begin  -- architecture rtl
         core_instruction_writedata     => core_instruction_writedata,    
         core_instruction_waitrequest   => core_instruction_waitrequest,
 
-        AWID                           => instr_AWID, 
+        --AWID                           => instr_AWID, 
         AWADDR                         => instr_AWADDR, 
         AWLEN                          => instr_AWLEN,
         AWSIZE                         => instr_AWSIZE,
@@ -518,19 +518,19 @@ begin  -- architecture rtl
         AWVALID                        => instr_AWVALID,
         AWREADY                        => instr_AWREADY,
 
-        WID                            => instr_WID,
+        --nWID                            => instr_WID,
         WSTRB                          => instr_WSTRB,
         WLAST                          => instr_WLAST,
         WVALID                         => instr_WVALID,
         WDATA                          => instr_WDATA,
         WREADY                         => instr_WREADY,
         
-        BID                            => instr_BID,
+        --BID                            => instr_BID,
         BRESP                          => instr_BRESP,
         BVALID                         => instr_BVALID,
         BREADY                         => instr_BREADY,
 
-        ARID                           => instr_ARID, 
+        --ARID                           => instr_ARID, 
         ARADDR                         => instr_ARADDR,
         ARLEN                          => instr_ARLEN, 
         ARSIZE                         => instr_ARSIZE,
@@ -541,7 +541,7 @@ begin  -- architecture rtl
         ARVALID                        => instr_ARVALID,
         ARREADY                        => instr_ARREADY,
 
-        RID                            => instr_RID, 
+        --RID                            => instr_RID, 
         RDATA                          => instr_RDATA, 
         RRESP                          => instr_RRESP,
         RLAST                          => instr_RLAST, 
@@ -551,7 +551,7 @@ begin  -- architecture rtl
 
 		cache : if CACHE_ENABLE = 1 generate 
 
-			signal cache_AWID    : std_logic_vector(3 downto 0);
+			-- signal cache_AWID    : std_logic_vector(3 downto 0);
 			signal cache_AWADDR  : std_logic_vector(REGISTER_SIZE-1 downto 0);
 			signal cache_AWLEN   : std_logic_vector(3 downto 0);
 			signal cache_AWSIZE  : std_logic_vector(2 downto 0);
@@ -563,19 +563,19 @@ begin  -- architecture rtl
 			signal cache_AWVALID : std_logic;
 			signal cache_AWREADY : std_logic;
 
-			signal cache_WID     : std_logic_vector(3 downto 0);
+			-- signal cache_WID     : std_logic_vector(3 downto 0);
 			signal cache_WDATA   : std_logic_vector(REGISTER_SIZE -1 downto 0);
 			signal cache_WSTRB   : std_logic_vector(REGISTER_SIZE/BYTE_SIZE-1 downto 0);
 			signal cache_WLAST   : std_logic;
 			signal cache_WVALID  : std_logic;
 			signal cache_WREADY  : std_logic;
 
-			signal cache_BID     : std_logic_vector(3 downto 0);
+			-- signal cache_BID     : std_logic_vector(3 downto 0);
 			signal cache_BRESP   : std_logic_vector(1 downto 0);
 			signal cache_BVALID  : std_logic;
 			signal cache_BREADY  : std_logic;
 
-			signal cache_ARID    : std_logic_vector(3 downto 0);
+			-- signal cache_ARID    : std_logic_vector(3 downto 0);
 			signal cache_ARADDR  : std_logic_vector(REGISTER_SIZE-1 downto 0);
 			signal cache_ARLEN   : std_logic_vector(3 downto 0);
 			signal cache_ARSIZE  : std_logic_vector(2 downto 0);
@@ -586,7 +586,7 @@ begin  -- architecture rtl
 			signal cache_ARVALID : std_logic;
 			signal cache_ARREADY : std_logic;
 
-			signal cache_RID     : std_logic_vector(3 downto 0);
+			-- signal cache_RID     : std_logic_vector(3 downto 0);
 			signal cache_RDATA   : std_logic_vector(REGISTER_SIZE -1 downto 0);
 			signal cache_RRESP   : std_logic_vector(1 downto 0);
 			signal cache_RLAST   : std_logic;
@@ -606,7 +606,7 @@ begin  -- architecture rtl
 					clk => clk,
 					reset => reset,
 					
-					in_AWID       =>  instr_AWID,      
+					-- in_AWID       =>  instr_AWID,      
 					in_AWADDR     =>  instr_AWADDR, 
 					in_AWLEN      =>  instr_AWLEN,  
 					in_AWSIZE     =>  instr_AWSIZE, 
@@ -618,19 +618,19 @@ begin  -- architecture rtl
 					in_AWVALID    =>  instr_AWVALID,
 					in_AWREADY    =>  instr_AWREADY,
 																			
-					in_WID        =>  instr_WID,    
+					-- in_WID        =>  instr_WID,    
 					in_WDATA      =>  instr_WDATA,  
 					in_WSTRB      =>  instr_WSTRB,  
 					in_WLAST      =>  instr_WLAST,  
 					in_WVALID     =>  instr_WVALID, 
 					in_WREADY     =>  instr_WREADY, 
 																			
-					in_BID        =>  instr_BID,    
+					-- in_BID        =>  instr_BID,    
 					in_BRESP      =>  instr_BRESP,  
 					in_BVALID     =>  instr_BVALID, 
 					in_BREADY     =>  instr_BREADY, 
 																			
-					in_ARID       =>  instr_ARID,   
+					-- in_ARID       =>  instr_ARID,   
 					in_ARADDR     =>  instr_ARADDR,
 					in_ARLEN      =>  instr_ARLEN, 
 					in_ARSIZE     =>  instr_ARSIZE, 
@@ -641,14 +641,14 @@ begin  -- architecture rtl
 					in_ARVALID    =>  instr_ARVALID,
 					in_ARREADY    =>  instr_ARREADY,
 																			
-					in_RID        =>  instr_RID,    
+					-- in_RID        =>  instr_RID,    
 					in_RDATA      =>  instr_RDATA,  
 					in_RRESP      =>  instr_RRESP,  
 					in_RLAST      =>  instr_RLAST,  
 					in_RVALID     =>  instr_RVALID, 
 					in_RREADY     =>  instr_RREADY, 
 					
-					cache_AWID    =>  cache_AWID,   
+					-- cache_AWID    =>  cache_AWID,   
 					cache_AWADDR  =>  cache_AWADDR, 
 					cache_AWLEN   =>  cache_AWLEN,  
 					cache_AWSIZE  =>  cache_AWSIZE, 
@@ -660,19 +660,19 @@ begin  -- architecture rtl
 					cache_AWVALID =>  cache_AWVALID,
 					cache_AWREADY =>  cache_AWREADY,
 																				 
-					cache_WID     =>  cache_WID,    
+					-- cache_WID     =>  cache_WID,    
 					cache_WDATA   =>  cache_WDATA,  
 					cache_WSTRB   =>  cache_WSTRB,  
 					cache_WLAST   =>  cache_WLAST,  
 					cache_WVALID  =>  cache_WVALID, 
 					cache_WREADY  =>  cache_WREADY, 
 																				 
-					cache_BID     =>  cache_BID,    
+					-- cache_BID     =>  cache_BID,    
 					cache_BRESP   =>  cache_BRESP,  
 					cache_BVALID  =>  cache_BVALID, 
 					cache_BREADY  =>  cache_BREADY, 
 																				 
-					cache_ARID    =>  cache_ARID,  
+					-- cache_ARID    =>  cache_ARID,  
 					cache_ARADDR  =>  cache_ARADDR, 
 					cache_ARLEN   =>  cache_ARLEN,  
 					cache_ARSIZE  =>  cache_ARSIZE, 
@@ -683,14 +683,14 @@ begin  -- architecture rtl
 					cache_ARVALID =>  cache_ARVALID,
 					cache_ARREADY =>  cache_ARREADY,
 																				 
-					cache_RID     =>  cache_RID,    
+					-- cache_RID     =>  cache_RID,    
 					cache_RDATA   =>  cache_RDATA,  
 					cache_RRESP   =>  cache_RRESP,  
 					cache_RLAST   =>  cache_RLAST,  
 					cache_RVALID  =>  cache_RVALID, 
 					cache_RREADY  =>  cache_RREADY, 
 
-					tcram_AWID    =>  itcram_AWID,    
+					-- tcram_AWID    =>  itcram_AWID,    
 					tcram_AWADDR  =>  itcram_AWADDR,  
 					tcram_AWLEN   =>  itcram_AWLEN,   
 					tcram_AWSIZE  =>  itcram_AWSIZE,  
@@ -702,19 +702,19 @@ begin  -- architecture rtl
 					tcram_AWVALID =>  itcram_AWVALID, 
 					tcram_AWREADY =>  itcram_AWREADY, 
 																				 
-					tcram_WID     =>  itcram_WID,     
+					-- tcram_WID     =>  itcram_WID,     
 					tcram_WDATA   =>  itcram_WDATA,   
 					tcram_WSTRB   =>  itcram_WSTRB,   
 					tcram_WLAST   =>  itcram_WLAST,   
 					tcram_WVALID  =>  itcram_WVALID,  
 					tcram_WREADY  =>  itcram_WREADY,  
 																				 
-					tcram_BID     =>  itcram_BID,     
+					-- tcram_BID     =>  itcram_BID,     
 					tcram_BRESP   =>  itcram_BRESP,   
 					tcram_BVALID  =>  itcram_BVALID,  
 					tcram_BREADY  =>  itcram_BREADY,  
 																				 
-					tcram_ARID    =>  itcram_ARID,   
+					-- tcram_ARID    =>  itcram_ARID,   
 					tcram_ARADDR  =>  itcram_ARADDR,  
 					tcram_ARLEN   =>  itcram_ARLEN,   
 					tcram_ARSIZE  =>  itcram_ARSIZE,  
@@ -725,7 +725,7 @@ begin  -- architecture rtl
 					tcram_ARVALID =>  itcram_ARVALID, 
 					tcram_ARREADY =>  itcram_ARREADY, 
 																				 
-					tcram_RID     =>  itcram_RID,     
+					-- tcram_RID     =>  itcram_RID,     
 					tcram_RDATA   =>  itcram_RDATA,   
 					tcram_RRESP   =>  itcram_RRESP,   
 					tcram_RLAST   =>  itcram_RLAST,   
@@ -748,7 +748,7 @@ begin  -- architecture rtl
 					clk          => clk, 
 					reset        => reset, 
 
-					orca_AWID    => cache_AWID,
+					-- orca_AWID    => cache_AWID,
 					orca_AWADDR  => cache_AWADDR,
 					orca_AWLEN   => cache_AWLEN,
 					orca_AWSIZE  => cache_AWSIZE,
@@ -760,19 +760,19 @@ begin  -- architecture rtl
 					orca_AWVALID => cache_AWVALID,
 					orca_AWREADY => cache_AWREADY,
 																			 
-					orca_WID     => cache_WID,
+					-- orca_WID     => cache_WID,
 					orca_WDATA   => cache_WDATA,
 					orca_WSTRB   => cache_WSTRB,
 					orca_WLAST   => cache_WLAST,
 					orca_WVALID  => cache_WVALID,
 					orca_WREADY  => cache_WREADY,
 																			 
-					orca_BID     => cache_BID,
+					-- orca_BID     => cache_BID,
 					orca_BRESP   => cache_BRESP,
 					orca_BVALID  => cache_BVALID,
 					orca_BREADY  => cache_BREADY,
 																			 
-					orca_ARID    => cache_ARID,
+					-- orca_ARID    => cache_ARID,
 					orca_ARADDR  => cache_ARADDR,
 					orca_ARLEN   => cache_ARLEN,
 					orca_ARSIZE  => cache_ARSIZE,
@@ -783,14 +783,14 @@ begin  -- architecture rtl
 					orca_ARVALID => cache_ARVALID,
 					orca_ARREADY => cache_ARREADY,
 																			 
-					orca_RID     => cache_RID,
+					-- orca_RID     => cache_RID,
 					orca_RDATA   => cache_RDATA,
 					orca_RRESP   => cache_RRESP,
 					orca_RLAST   => cache_RLAST,
 					orca_RVALID  => cache_RVALID,
 					orca_RREADY  => cache_RREADY,
 
-					dram_AWID    => iram_AWID,
+					-- dram_AWID    => iram_AWID,
 					dram_AWADDR  => iram_AWADDR,
 					dram_AWLEN   => iram_AWLEN,
 					dram_AWSIZE  => iram_AWSIZE,
@@ -802,19 +802,19 @@ begin  -- architecture rtl
 					dram_AWVALID => iram_AWVALID,
 					dram_AWREADY => iram_AWREADY,
 																		 
-					dram_WID     => iram_WID,
+					-- dram_WID     => iram_WID,
 					dram_WDATA   => iram_WDATA,
 					dram_WSTRB   => iram_WSTRB,
 					dram_WLAST   => iram_WLAST,
 					dram_WVALID  => iram_WVALID,
 					dram_WREADY  => iram_WREADY,
 																		 
-					dram_BID     => iram_BID,
+					-- dram_BID     => iram_BID,
 					dram_BRESP   => iram_BRESP,
 					dram_BVALID  => iram_BVALID,
 					dram_BREADY  => iram_BREADY,
 																		 
-					dram_ARID    => iram_ARID,
+					-- dram_ARID    => iram_ARID,
 					dram_ARADDR  => iram_ARADDR,
 					dram_ARLEN   => iram_ARLEN,
 					dram_ARSIZE  => iram_ARSIZE,
@@ -825,7 +825,7 @@ begin  -- architecture rtl
 					dram_ARVALID => iram_ARVALID,
 					dram_ARREADY => iram_ARREADY,
 																		 
-					dram_RID     => iram_RID,
+					-- dram_RID     => iram_RID,
 					dram_RDATA   => iram_RDATA,
 					dram_RRESP   => iram_RRESP,
 					dram_RLAST   => iram_RLAST,
@@ -838,7 +838,7 @@ begin  -- architecture rtl
 		no_cache: if CACHE_ENABLE /= 1 generate
 		begin
 
-			iram_AWID    <= (others => '0');
+			--iram_AWID    <= (others => '0');
 			iram_AWADDR  <= (others => '0');
 			iram_AWLEN	 <= (others => '0'); 
 			iram_AWSIZE  <= (others => '0');
@@ -849,7 +849,7 @@ begin  -- architecture rtl
 			iram_AWPROT  <= (others => '0');
 			iram_AWVALID <= '0'; 
 								 
-			iram_WID		 <= (others => '0'); 
+			--iram_WID		 <= (others => '0'); 
 			iram_WDATA	 <= (others => '0'); 
 			iram_WSTRB   <= (others => '0'); 
 			iram_WLAST   <= '0'; 
@@ -857,7 +857,7 @@ begin  -- architecture rtl
 								 
 			iram_BREADY  <= '0';
 								 
-			iram_ARID    <= (others => '0');	
+			--iram_ARID    <= (others => '0');	
 			iram_ARADDR  <= (others => '0');	
 			iram_ARLEN   <= (others => '0');	
 			iram_ARSIZE  <= (others => '0'); 	
@@ -869,7 +869,7 @@ begin  -- architecture rtl
 									 	
 			iram_RREADY  <= '0';	
 		
-			itcram_AWID    <= instr_AWID;    
+			--itcram_AWID    <= instr_AWID;    
 			itcram_AWADDR  <= instr_AWADDR;  
 			itcram_AWLEN   <= instr_AWLEN;   
 			itcram_AWSIZE  <= instr_AWSIZE;  
@@ -881,19 +881,19 @@ begin  -- architecture rtl
 			itcram_AWVALID <= instr_AWVALID; 
 			instr_AWREADY  <= itcram_AWREADY; 
 												 	 
-			itcram_WID     <= instr_WID;     
+			--itcram_WID     <= instr_WID;     
 			itcram_WDATA   <= instr_WDATA;   
 			itcram_WSTRB   <= instr_WSTRB;   
 			itcram_WLAST   <= instr_WLAST;   
 			itcram_WVALID  <= instr_WVALID;  
 			instr_WREADY	 <= itcram_WREADY;
 												 		 
-			instr_BID      <= itcram_BID;     
+			--instr_BID      <= itcram_BID;     
 			instr_BRESP    <= itcram_BRESP;   
 			instr_BVALID   <= itcram_BVALID;  
 			itcram_BREADY  <= instr_BREADY;  
 												 		 
-			itcram_ARID    <= instr_ARID;   
+			--itcram_ARID    <= instr_ARID;   
 			itcram_ARADDR  <= instr_ARADDR;  
 			itcram_ARLEN   <= instr_ARLEN;   
 			itcram_ARSIZE  <= instr_ARSIZE;  
@@ -904,7 +904,7 @@ begin  -- architecture rtl
 			itcram_ARVALID <= instr_ARVALID; 
 			instr_ARREADY  <= itcram_ARREADY; 
 												 		 
-			instr_RID      <= itcram_RID;     
+			--instr_RID      <= itcram_RID;     
 			instr_RDATA    <= itcram_RDATA;   
 			instr_RRESP    <= itcram_RRESP;   
 			instr_RLAST    <= itcram_RLAST;   
